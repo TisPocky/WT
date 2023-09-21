@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <div id="Factorial"></div>
+  <input type="submit" onclick="factorial()">
+</body>
+</html>
+<script>
+  function factorial(){
+    var a=parseInt(prompt('Enter an integer:'));
+    let fact=1;
+    for(let i=1;i<=a;i++){
+      fact*=i;
+    }
+    var answer="The factorial of "+ a +" = "+fact;
+    document.getElementById('Factorial').innerHTML=answer;
+  }
+</script>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Name: <input type="text" id="name" onblur="validate()">
+        </form>
+</body>
+</html>
+<script>
+    function validate(){
+        var a=document.getElementById('name');
+        regex_a=/[0-9]/
+        a.value=a.value.toUpperCase();//Not Important
+        if(!a.value){
+        alert("Blank Field , Please input text !");
+    }
+        else if(regex_a.test(a.value)){
+            alert('No Blank Field and contains number');
+        }
+        else if(!regex_a.test(a.value)){
+            alert('No Blank Field but doesnt contain number');
+        }
+    }
+</script>

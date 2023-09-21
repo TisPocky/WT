@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Positioning Example</title>
+  </head>
+  <body>
+        <div>This is some content in a div.
+      <p id="p1">This is some content in a paragraph.</p>
+      <p id="p2">This is some content in a paragraph.</p>
+      </div>
+  </body>
+</html>
+<style>
+ div {
+  position: fixed;
+  border: 2px solid;
+}
+
+#p1 {
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: green;
+}
+
+#p2 {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+</style>

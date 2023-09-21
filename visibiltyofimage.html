@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Toggle" id="button" onclick="visibility()"><br><br>
+    <img src="hello.jpg" id="image" height="300px">
+</body>
+</html>
+<script>
+    function visibility(){
+        var img=document.getElementById('image');
+        if(img.style.display=='none'){
+            img.style.display='block';
+        }
+        else{
+            img.style.display='none';
+        }
+    }
+</script>

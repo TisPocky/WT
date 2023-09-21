@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Username: <input type="text" id="name" maxlength="6"></p>
+        <p>Email: <input type="email" id="email"></p>
+        <p>Contact No. : <input type="number" id="contact"></p>
+        <p>Password: <input type="password" id="pass" maxlength="10"></p>
+        <p><input type="submit" onclick="return validate()"></p>
+    </form>
+</body>
+</html>
+<script>
+function validate(){
+    var a=document.getElementById("name");
+    var b=document.getElementById("email");
+    var c=document.getElementById("contact");
+    var d=document.getElementById('pass');
+    if((!a.value)&&(!b.value)&&(!c.value)&&(!d.value)){
+        alert("Please Enter Details");
+    }
+    else if((!a.value)||(!b.value)||(!c.value)||(!d.value)){
+        alert("Fill Up Remaining Details");
+        return false;
+    }
+    else{
+        var regex_email=/[a-zA-Z0-9]@[a-zA-Z].[a-z]/;
+        var regex_name=/[a-z]/;
+        var regex_contact=/[0-9]/;
+        var regex_pass=/[a-zA-Z0-9@#$&]/;
+        if(regex_name.test(a.value)&&regex_email.test(b.value)&&regex_contact.test(c.value)&&regex_pass.test(d.value)){
+            alert("Verified");
+        }
+        else{
+            alert("Fill the form appropriately");
+            return false;
+        }
+    }
+}
+</script>

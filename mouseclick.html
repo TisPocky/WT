@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>X-Coords:<span id="x"></span></p>
+    <p>Y-Coords:<span id="y"></span></p>
+</body>
+</html>
+<script>
+    function click(){
+        document.getElementById('x').innerHTML=event.clientX;
+        document.getElementById('y').innerHTML=event.clientY;
+    }
+    document.addEventListener("click",click);
+</script>
